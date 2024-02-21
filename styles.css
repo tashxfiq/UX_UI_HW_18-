@@ -104,4 +104,48 @@ footer ul li a {
   text-align: center; /* Center the paragraph content */
   color: black; /* Set text color to black */
 }
+
+.flexContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skillCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+}
+
+#myWork-Grid {
+  display: grid;
+  grid-template-rows: max-content 3fr 3fr 3fr max-content;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Mobile media query */
+  
+  /* Adjustments for flex containers */
+  .flexContainer {
+    flex-direction: column; /* Change flex direction to column for stacking items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  /* Adjustments for grid containers */
+  #myWork-Grid {
+    grid-template-rows: auto; /* Reset grid-template-rows to default */
+    grid-template-columns: 1fr; /* Use a single column layout */
+  }
+
+  .project-card {
+    display: block; /* Revert display back to block */
+  }
+}
+
+
 }
